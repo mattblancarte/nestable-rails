@@ -354,8 +354,9 @@
 
             /**
              * move horizontal
+             * update:: Make sure that nesting only occurs is the previous element is flagged as a folder
              */
-            if (mouse.dirAx && mouse.distAxX >= opt.threshold) {
+            if (mouse.dirAx && mouse.distAxX >= opt.threshold && this.placeEl.prev.data('folder')) {
                 // reset move distance on x-axis for new phase
                 mouse.distAxX = 0;
                 prev = this.placeEl.prev(opt.itemNodeName);
