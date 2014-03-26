@@ -70,9 +70,9 @@
 
             list.placeEl = $('<div class="' + list.options.placeClass + '"/>');
 
-            $.each(this.el.find(list.options.itemNodeName), function(k, el) {
-                list.setParent($(el));
-            });
+            //$.each(this.el.find(list.options.itemNodeName), function(k, el) {
+            //    list.setParent($(el));
+            //});
 
             list.el.on('click', 'button', function(e) {
                 if (list.dragEl || (!hasTouch && e.button !== 0)) {
